@@ -1,47 +1,57 @@
 # Vector Analysis Toolkit
-This project is a toolkit for analyzing vectors of all types, including scalar operations, vector addition, dot product, cross product, and more. It’s built in Python to assist students and researchers in performing vector-related calculations.
+This project is a Python toolkit for analyzing vectors of all types. It includes operations like addition, subtraction, scalar multiplication, dot product, cross product, and magnitude calculation.
 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/mostafa2o/vector-analysis-toolkit.git
+   git clone https://github.com/username/vector-analysis-toolkit.git
 ## How to Use
-After installation, you can use the toolkit to perform various vector operations. Below are examples of how to use it:
+After installation, you can use the toolkit to perform vector operations. Below are examples:
 
 1. Vector Addition
-To add two vectors:
 from vector_ops import add_vectors
 
-# Define two vectors as lists
 v1 = [1, 2, 3]
 v2 = [4, 5, 6]
 result = add_vectors(v1, v2)
-print(f"Sum of vectors: {result}")
-# Output: Sum of vectors: [5, 7, 9]
-2. Dot Product
-To calculate the dot product of two vectors:
-from vector_ops import dot_product
+print(f"Sum: {result}")
+# Output: Sum: [5, 7, 9]
+2. Vector Subtraction
+from vector_ops import subtract_vectors
 
 v1 = [1, 2, 3]
 v2 = [4, 5, 6]
-result = dot_product(v1, v2)
-print(f"Dot product: {result}")
-# Output: Dot product: 32  (1*4 + 2*5 + 3*6)
-3. Cross Product (3D Vectors)
-To compute the cross product of two 3D vectors:
-from vector_ops import cross_product
-
-v1 = [1, 0, 0]
-v2 = [0, 1, 0]
-result = cross_product(v1, v2)
-print(f"Cross product: {result}")
-# Output: Cross product: [0, 0, 1]
-4. Scalar Multiplication
-To multiply a vector by a scalar:
+result = subtract_vectors(v1, v2)
+print(f"Difference: {result}")
+# Output: Difference: [-3, -3, -3]
+3. Scalar Multiplication
 from vector_ops import scalar_multiply
 
 v = [1, 2, 3]
 scalar = 2
 result = scalar_multiply(v, scalar)
-print(f"Scalar multiplication: {result}")
-# Output: Scalar multiplication: [2, 4, 6]
+print(f"Result: {result}")
+# Output: Result: [2, 4, 6]
+4. Dot Product
+from vector_ops import dot_product
+
+v1 = [1, 2, 3]
+v2 = [4, 5, 6]
+result = dot_product(v1, v2)
+print(f"Dot Product: {result}")
+# Output: Dot Product: 32
+5. Cross Product (3D Vectors)
+from vector_ops import cross_product
+
+v1 = [1, 0, 0]
+v2 = [0, 1, 0]
+result = cross_product(v1, v2)
+print(f"Cross Product: {result}")
+# Output: Cross Product: [0, 0, 1] 
+6. Magnitude
+from vector_ops import magnitude
+
+v = [1, 2, 3]
+result = magnitude(v)
+print(f"Magnitude: {result}")
+# Output: Magnitude: 3.7416573867739413
